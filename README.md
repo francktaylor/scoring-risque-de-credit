@@ -17,7 +17,7 @@ Projet de bout en bout sur les données [Home Credit Default Risk](https://www.k
 - Chaque décision est expliquée par ses principaux facteurs (valeurs SHAP).
 - Un audit d'équité compare les décisions selon le sexe et l'âge.
 
-**Application interactive :** *lien à ajouter après le déploiement sur Streamlit Community Cloud*
+**Application interactive :** https://scoring-credit-francktaylor.streamlit.app
 
 ## Démarche
 
