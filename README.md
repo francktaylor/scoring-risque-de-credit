@@ -12,10 +12,12 @@ Projet de bout en bout sur les données [Home Credit Default Risk](https://www.k
 | Régression logistique, 7 tables | 0,772 | 0,54 |
 | **LightGBM, 7 tables (échantillon de test)** | **0,792** | **0,58** |
 
-- Règle d'octroi fondée sur les coûts : refus au-delà de 18 % de probabilité de défaut. Elle accepte 89 % des demandes, fait passer le taux de défaut des clients acceptés de 8,1 % à 5,4 % et améliore le résultat de 10 % par rapport à une acceptation systématique.
+- Règle d'octroi fondée sur les coûts : refus au-delà de 17 % de probabilité de défaut. Elle accepte 88 % des demandes, fait passer le taux de défaut des clients acceptés de 8,1 % à 5,2 % et améliore le résultat de 10 % par rapport à une acceptation systématique.
 - Les probabilités sont bien calibrées (score de Brier de 0,065).
 - Chaque décision est expliquée par ses principaux facteurs (valeurs SHAP).
 - Un audit d'équité compare les décisions selon le sexe et l'âge.
+
+**Application interactive :** *lien à ajouter après le déploiement sur Streamlit Community Cloud*
 
 ## Démarche
 
@@ -39,6 +41,10 @@ projet-home-credit/
 │   ├── preparation.py # règles de nettoyage, écrêtage, encodage WoE, logistique à signes contraints
 │   └── modelisation.py# pipeline de référence et validation croisée
 ├── modeles/           # modèle LightGBM enregistré
+├── app/
+│   ├── app.py                 # application Streamlit
+│   ├── preparer_resultats.py  # génère les résultats agrégés lus par l'application
+│   └── resultats/             # tables agrégées (aucune donnée brute)
 └── requirements.txt
 ```
 
@@ -52,6 +58,15 @@ jupyter notebook
 
 Placer les fichiers CSV de Kaggle dans `data/brutes/`, puis exécuter les notebooks dans l'ordre. Chacun produit les fichiers nécessaires au suivant.
 
+Pour l'application, depuis la racine du projet :
+
+```bash
+python app/preparer_resultats.py
+streamlit run app/app.py
+```
+
+L'application ne lit que les résultats agrégés de `app/resultats/` : elle fonctionne sans les données de Kaggle, qui ne peuvent pas être republiées.
+
 ## Outils
 
-Python (pandas, scikit-learn, LightGBM, SHAP), SQL (DuckDB), matplotlib et seaborn.
+Python (pandas, scikit-learn, LightGBM, SHAP), SQL (DuckDB), matplotlib, seaborn, Streamlit et Altair.

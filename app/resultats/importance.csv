@@ -1,0 +1,21 @@
+variable,libelle,source,importance
+MOYENNE_EXT,Moyenne des scores de crédit externes,Demande de crédit,0.25274234674853535
+EXT_SOURCE_2,Score de crédit externe n° 2,Demande de crédit,0.11151050701582053
+EXT_SOURCE_3,Score de crédit externe n° 3,Demande de crédit,0.1102029706399687
+PART_FINANCEE,Montant du crédit / prix du bien,Demande de crédit,0.10125779388538424
+EXT_SOURCE_1,Score de crédit externe n° 1,Demande de crédit,0.09906359809856966
+ORGANIZATION_TYPE,Type d'employeur,Demande de crédit,0.09650770175496713
+MIN_EXT,Plus faible score de crédit externe,Demande de crédit,0.0956378918531218
+DUREE_ANNUITES,Durée du crédit (en annuités),Demande de crédit,0.09360361000557423
+AMT_ANNUITY,Montant de l'annuité,Demande de crédit,0.09201430384195206
+POS_ECHEANCES_RESTANTES,Échéances restant à payer (prêts en cours),Historique Home Credit,0.09068783690841634
+PREV_MONTANT_MOYEN,Home Credit : montant moyen des crédits passés,Historique Home Credit,0.08552428718731994
+PREV_DUREE_MOYENNE,Home Credit : durée moyenne des crédits passés,Historique Home Credit,0.07545245349885812
+OCCUPATION_TYPE,Profession,Demande de crédit,0.07256712913872458
+POS_NB_MOIS,Prêts conso : mois d'historique,Historique Home Credit,0.06924952863674282
+AGE,Âge,Demande de crédit,0.06923561786512364
+NAME_EDUCATION_TYPE,Niveau d'études,Demande de crédit,0.0652072477126041
+OWN_CAR_AGE,Âge de la voiture,Demande de crédit,0.06371265847340694
+ANCIENNETE_EMPLOI,Ancienneté dans l'emploi (années),Demande de crédit,0.05844502509074165
+PREV_RATIO_ACCORDE_DEMANDE,Home Credit : montant accordé / demandé,Historique Home Credit,0.05801511844046296
+BUR_JOURS_RESTANTS_MOYEN,BUR_JOURS_RESTANTS_MOYEN,Bureau de crédit,0.05397903778575562

@@ -1,0 +1,458 @@
+[
+  {
+    "client": "Client 1",
+    "proba": 0.019988720985113586,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": -0.44215608819969454,
+    "facteurs": [
+      {
+        "variable": "MOYENNE_EXT",
+        "libelle": "Moyenne des scores de crédit externes",
+        "valeur": 0.5917054445401732,
+        "contribution": -0.18102737927985577
+      },
+      {
+        "variable": "EXT_SOURCE_3",
+        "libelle": "Score de crédit externe n° 3",
+        "valeur": 0.7194907850918436,
+        "contribution": -0.13742648801935528
+      },
+      {
+        "variable": "BUR_NB_CLOS",
+        "libelle": "BUR_NB_CLOS",
+        "valeur": 9.0,
+        "contribution": -0.10681726388534883
+      },
+      {
+        "variable": "DEF_60_CNT_SOCIAL_CIRCLE",
+        "libelle": "DEF_60_CNT_SOCIAL_CIRCLE",
+        "valeur": 1.0,
+        "contribution": 0.09131134541217445
+      },
+      {
+        "variable": "INST_NB_ECHEANCES",
+        "libelle": "Nombre d'échéances passées",
+        "valeur": 115.0,
+        "contribution": -0.09016970270749652
+      },
+      {
+        "variable": "EXT_SOURCE_2",
+        "libelle": "Score de crédit externe n° 2",
+        "valeur": 0.35683016681741603,
+        "contribution": 0.0851685276703485
+      },
+      {
+        "variable": "BUR_RETARD_MAX_MONTANT",
+        "libelle": "BUR_RETARD_MAX_MONTANT",
+        "valeur": 0.0,
+        "contribution": -0.08364184137417986
+      },
+      {
+        "variable": "PART_FINANCEE",
+        "libelle": "Montant du crédit / prix du bien",
+        "valeur": 1.0,
+        "contribution": -0.08361268359539656
+      }
+    ]
+  },
+  {
+    "client": "Client 2",
+    "proba": 0.050007529498537186,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": -0.2508724300348925,
+    "facteurs": [
+      {
+        "variable": "EXT_SOURCE_1",
+        "libelle": "Score de crédit externe n° 1",
+        "valeur": null,
+        "contribution": 0.12480929869063098
+      },
+      {
+        "variable": "PREV_MONTANT_MOYEN",
+        "libelle": "Home Credit : montant moyen des crédits passés",
+        "valeur": 50843.25,
+        "contribution": 0.122554613808308
+      },
+      {
+        "variable": "AGE",
+        "libelle": "Âge",
+        "valeur": 38.04791238877481,
+        "contribution": 0.10012075939473869
+      },
+      {
+        "variable": "DUREE_ANNUITES",
+        "libelle": "Durée du crédit (en annuités)",
+        "valeur": 23.601604909133822,
+        "contribution": -0.09657155833672235
+      },
+      {
+        "variable": "PART_FINANCEE",
+        "libelle": "Montant du crédit / prix du bien",
+        "valeur": 1.0,
+        "contribution": -0.09469309583713163
+      },
+      {
+        "variable": "EXT_SOURCE_3",
+        "libelle": "Score de crédit externe n° 3",
+        "valeur": 0.4014074137749511,
+        "contribution": 0.09107149908550502
+      },
+      {
+        "variable": "ANCIENNETE_EMPLOI",
+        "libelle": "Ancienneté dans l'emploi (années)",
+        "valeur": 0.5393566050650239,
+        "contribution": 0.08797828401550271
+      },
+      {
+        "variable": "PREV_RATIO_ACCORDE_DEMANDE",
+        "libelle": "Home Credit : montant accordé / demandé",
+        "valeur": 0.8813433858535531,
+        "contribution": -0.08465350241102729
+      }
+    ]
+  },
+  {
+    "client": "Client 3",
+    "proba": 0.09001683305350568,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": 0.13054629990169442,
+    "facteurs": [
+      {
+        "variable": "PREV_RATIO_ACCORDE_DEMANDE",
+        "libelle": "Home Credit : montant accordé / demandé",
+        "valeur": 1.1376837085332898,
+        "contribution": 0.15878496597574196
+      },
+      {
+        "variable": "POS_NB_MOIS",
+        "libelle": "Prêts conso : mois d'historique",
+        "valeur": 56.0,
+        "contribution": -0.15336211708211647
+      },
+      {
+        "variable": "OCCUPATION_TYPE",
+        "libelle": "Profession",
+        "valeur": "Laborers",
+        "contribution": 0.124750560291727
+      },
+      {
+        "variable": "AMT_ANNUITY",
+        "libelle": "Montant de l'annuité",
+        "valeur": 33930.0,
+        "contribution": 0.11944841320316521
+      },
+      {
+        "variable": "EXT_SOURCE_1",
+        "libelle": "Score de crédit externe n° 1",
+        "valeur": null,
+        "contribution": 0.11879249049086374
+      },
+      {
+        "variable": "INST_RETARD_MOYEN",
+        "libelle": "Retard de paiement moyen (jours)",
+        "valeur": 7.5,
+        "contribution": 0.11604412380743506
+      },
+      {
+        "variable": "PART_FINANCEE",
+        "libelle": "Montant du crédit / prix du bien",
+        "valeur": 1.2574017094017094,
+        "contribution": 0.1116662962717035
+      },
+      {
+        "variable": "TOTALAREA_MODE",
+        "libelle": "TOTALAREA_MODE",
+        "valeur": 0.6388,
+        "contribution": -0.09607610448078759
+      }
+    ]
+  },
+  {
+    "client": "Client 4",
+    "proba": 0.13994712887284738,
+    "defaut_reel": 1,
+    "base_logit": -2.944024343088796,
+    "autres": 0.2950819492764727,
+    "facteurs": [
+      {
+        "variable": "DEF_60_CNT_SOCIAL_CIRCLE",
+        "libelle": "DEF_60_CNT_SOCIAL_CIRCLE",
+        "valeur": 3.0,
+        "contribution": 0.3932692082176622
+      },
+      {
+        "variable": "PREV_PART_TAUX_ELEVE",
+        "libelle": "Home Credit : part des crédits à taux élevé",
+        "valeur": 1.0,
+        "contribution": 0.18039598283992228
+      },
+      {
+        "variable": "AMT_ANNUITY",
+        "libelle": "Montant de l'annuité",
+        "valeur": 12915.0,
+        "contribution": -0.158042901458839
+      },
+      {
+        "variable": "DEF_30_CNT_SOCIAL_CIRCLE",
+        "libelle": "Défauts dans l'entourage (30 jours)",
+        "valeur": 3.0,
+        "contribution": 0.14736394062788302
+      },
+      {
+        "variable": "OCCUPATION_TYPE",
+        "libelle": "Profession",
+        "valeur": "Laborers",
+        "contribution": 0.1344821616557396
+      },
+      {
+        "variable": "EXT_SOURCE_1",
+        "libelle": "Score de crédit externe n° 1",
+        "valeur": null,
+        "contribution": 0.127706668418435
+      },
+      {
+        "variable": "INST_PART_RETARD",
+        "libelle": "Échéances payées en retard",
+        "valeur": 0.18181818181818182,
+        "contribution": 0.10849781267684927
+      },
+      {
+        "variable": "AMT_GOODS_PRICE",
+        "libelle": "Prix du bien financé",
+        "valeur": 112500.0,
+        "contribution": -0.10045964420500293
+      }
+    ]
+  },
+  {
+    "client": "Client 5",
+    "proba": 0.1901059003324715,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": 0.3173880874799868,
+    "facteurs": [
+      {
+        "variable": "MOYENNE_EXT",
+        "libelle": "Moyenne des scores de crédit externes",
+        "valeur": 0.28041949116875187,
+        "contribution": 0.49658804986440724
+      },
+      {
+        "variable": "EXT_SOURCE_3",
+        "libelle": "Score de crédit externe n° 3",
+        "valeur": 0.2955826421513093,
+        "contribution": 0.19719934470085473
+      },
+      {
+        "variable": "BUR_NB_CLOS",
+        "libelle": "BUR_NB_CLOS",
+        "valeur": 8.0,
+        "contribution": -0.15568587811248571
+      },
+      {
+        "variable": "PREV_DUREE_MOYENNE",
+        "libelle": "Home Credit : durée moyenne des crédits passés",
+        "valeur": 20.5,
+        "contribution": 0.1429434897310311
+      },
+      {
+        "variable": "EXT_SOURCE_2",
+        "libelle": "Score de crédit externe n° 2",
+        "valeur": 0.26525634018619443,
+        "contribution": 0.13708083195932455
+      },
+      {
+        "variable": "INST_PART_RETARD_12M",
+        "libelle": "Échéances payées en retard (12 mois)",
+        "valeur": 0.375,
+        "contribution": 0.1234101606833392
+      },
+      {
+        "variable": "PREV_TAUX_REFUS",
+        "libelle": "Home Credit : taux de refus passé",
+        "valeur": 0.4444444444444444,
+        "contribution": 0.11968534891607764
+      },
+      {
+        "variable": "PREV_NB_EN_COURS",
+        "libelle": "Home Credit : crédits en cours",
+        "valeur": 2.0,
+        "contribution": 0.1160926969566776
+      }
+    ]
+  },
+  {
+    "client": "Client 6",
+    "proba": 0.24985169557627804,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": 0.8509261410920335,
+    "facteurs": [
+      {
+        "variable": "DUREE_ANNUITES",
+        "libelle": "Durée du crédit (en annuités)",
+        "valeur": 12.694794520547946,
+        "contribution": 0.33952699434196154
+      },
+      {
+        "variable": "AMT_ANNUITY",
+        "libelle": "Montant de l'annuité",
+        "valeur": 41062.5,
+        "contribution": 0.16000109159509546
+      },
+      {
+        "variable": "PREV_RATIO_ACCORDE_DEMANDE",
+        "libelle": "Home Credit : montant accordé / demandé",
+        "valeur": 1.1940764331210192,
+        "contribution": 0.1415768645900109
+      },
+      {
+        "variable": "INST_PART_RETARD",
+        "libelle": "Échéances payées en retard",
+        "valeur": 0.3333333333333333,
+        "contribution": 0.13538549444620915
+      },
+      {
+        "variable": "BUR_RETARD_MAX_MONTANT",
+        "libelle": "BUR_RETARD_MAX_MONTANT",
+        "valeur": 0.0,
+        "contribution": -0.11932280353553278
+      },
+      {
+        "variable": "POS_NB_MOIS",
+        "libelle": "Prêts conso : mois d'historique",
+        "valeur": 12.0,
+        "contribution": 0.11832026718101962
+      },
+      {
+        "variable": "EXT_SOURCE_1",
+        "libelle": "Score de crédit externe n° 1",
+        "valeur": null,
+        "contribution": 0.1129306733684425
+      },
+      {
+        "variable": "PART_FINANCEE",
+        "libelle": "Montant du crédit / prix du bien",
+        "valeur": 1.1584,
+        "contribution": 0.10527621793952747
+      }
+    ]
+  },
+  {
+    "client": "Client 7",
+    "proba": 0.3503031493349144,
+    "defaut_reel": 0,
+    "base_logit": -2.944024343088796,
+    "autres": 1.249444317402916,
+    "facteurs": [
+      {
+        "variable": "MOYENNE_EXT",
+        "libelle": "Moyenne des scores de crédit externes",
+        "valeur": 0.39311158648359734,
+        "contribution": 0.2998872207469234
+      },
+      {
+        "variable": "PREV_TAUX_REFUS",
+        "libelle": "Home Credit : taux de refus passé",
+        "valeur": 0.8333333333333334,
+        "contribution": 0.28159835069557043
+      },
+      {
+        "variable": "ORGANIZATION_TYPE",
+        "libelle": "Type d'employeur",
+        "valeur": "Kindergarten",
+        "contribution": -0.15482591779344868
+      },
+      {
+        "variable": "EXT_SOURCE_2",
+        "libelle": "Score de crédit externe n° 2",
+        "valeur": 0.2509469224947121,
+        "contribution": 0.14492730751215843
+      },
+      {
+        "variable": "PREV_PART_TAUX_ELEVE",
+        "libelle": "Home Credit : part des crédits à taux élevé",
+        "valeur": 1.0,
+        "contribution": 0.13516119018338604
+      },
+      {
+        "variable": "BUR_JOURS_RESTANTS_MOYEN",
+        "libelle": "BUR_JOURS_RESTANTS_MOYEN",
+        "valeur": 840.6666666666666,
+        "contribution": 0.12657366057513392
+      },
+      {
+        "variable": "AMT_ANNUITY",
+        "libelle": "Montant de l'annuité",
+        "valeur": 35122.5,
+        "contribution": 0.12206389194935441
+      },
+      {
+        "variable": "BUR_MONTANT_ACTIF",
+        "libelle": "BUR_MONTANT_ACTIF",
+        "valeur": 2143543.5,
+        "contribution": 0.12148737186668075
+      }
+    ]
+  },
+  {
+    "client": "Client 8",
+    "proba": 0.4999892598671409,
+    "defaut_reel": 1,
+    "base_logit": -2.944024343088796,
+    "autres": 0.6714429378230369,
+    "facteurs": [
+      {
+        "variable": "MOYENNE_EXT",
+        "libelle": "Moyenne des scores de crédit externes",
+        "valeur": 0.28584342424091885,
+        "contribution": 0.5311930559737627
+      },
+      {
+        "variable": "BUR_RETARD_MAX_MONTANT",
+        "libelle": "BUR_RETARD_MAX_MONTANT",
+        "valeur": 135600.12,
+        "contribution": 0.36780498468123385
+      },
+      {
+        "variable": "PREV_MONTANT_MOYEN",
+        "libelle": "Home Credit : montant moyen des crédits passés",
+        "valeur": 23499.0,
+        "contribution": 0.30574360448632154
+      },
+      {
+        "variable": "EXT_SOURCE_3",
+        "libelle": "Score de crédit externe n° 3",
+        "valeur": 0.08730427071350706,
+        "contribution": 0.27665853373656085
+      },
+      {
+        "variable": "MIN_EXT",
+        "libelle": "Plus faible score de crédit externe",
+        "valeur": 0.08730427071350706,
+        "contribution": 0.27555112003837157
+      },
+      {
+        "variable": "DUREE_ANNUITES",
+        "libelle": "Durée du crédit (en annuités)",
+        "valeur": 12.565971349585324,
+        "contribution": 0.22130935915823347
+      },
+      {
+        "variable": "ANCIENNETE_PIECE_IDENTITE",
+        "libelle": "Ancienneté de la pièce d'identité (années)",
+        "valeur": 0.810403832991102,
+        "contribution": 0.1494634283472876
+      },
+      {
+        "variable": "PREV_PART_TAUX_ELEVE",
+        "libelle": "Home Credit : part des crédits à taux élevé",
+        "valeur": 1.0,
+        "contribution": 0.14481435831255188
+      }
+    ]
+  }
+]
