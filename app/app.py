@@ -140,13 +140,18 @@ elif page == "Construction du modèle":
     st.markdown(
         "Les sources sont ajoutées une à une à la régression logistique, avec les mêmes plis de validation "
         "croisée, pour mesurer le gain propre à chacune. LightGBM est ensuite entraîné sur l'ensemble.")
-    graphe = alt.Chart(ETAPES).mark_bar().encode(
-        x=alt.X("AUC:Q", scale=alt.Scale(domain=[0.70, 0.80]), title="AUC (validation croisée)"),
-        y=alt.Y("étape:N", sort=None, title=None),
-        color=alt.Color("modèle:N", scale=alt.Scale(range=[GRIS, BLEU]), legend=alt.Legend(orient="bottom")),
-        tooltip=["étape", "modèle", alt.Tooltip("AUC:Q", format=".4f")])
-    texte = graphe.mark_text(align="left", dx=4).encode(text=alt.Text("AUC:Q", format=".3f"), color=alt.value("black"))
-    st.altair_chart((graphe + texte).properties(height=320), width="stretch")
+    donnees = ETAPES.rename(columns={"étape": "etape", "modèle": "modele", "AUC": "auc"})
+    ordre = donnees["etape"].tolist()
+    base = alt.Chart(donnees).encode(
+        y=alt.Y("etape:N", sort=ordre, title=None, axis=alt.Axis(labelLimit=300, labelFontSize=13)),
+        x=alt.X("auc:Q", scale=alt.Scale(domain=[0.70, 0.80], clamp=True), title="AUC (validation croisée)"),
+        tooltip=[alt.Tooltip("etape:N", title="étape"), alt.Tooltip("modele:N", title="modèle"),
+                 alt.Tooltip("auc:Q", format=".4f", title="AUC")])
+    barres = base.mark_bar(clip=True).encode(
+        color=alt.Color("modele:N", title=None, legend=alt.Legend(orient="bottom"),
+                        scale=alt.Scale(domain=["Régression logistique", "LightGBM"], range=[GRIS, BLEU])))
+    texte = base.mark_text(align="left", dx=4, color="black").encode(text=alt.Text("auc:Q", format=".3f"))
+    st.altair_chart((barres + texte).properties(height=320), width="stretch")
     c = st.columns(3)
     c[0].markdown("**Les scores externes dominent.** Seuls, ils atteignent déjà une AUC de 0,717 : ils résument "
                   "probablement l'historique du client auprès des bureaux de crédit.")
@@ -283,11 +288,11 @@ elif page == "Explication des décisions":
                 return v
             return f"{v:,.2f}".replace(",", " ").replace(".", ",") if abs(v) < 1000 else nombre(v)
 
-        f["étiquette"] = f["libelle"] + " = " + f["valeur"].map(afficher)
+        f["etiquette"] = f["libelle"] + " = " + f["valeur"].map(afficher)
         f["effet"] = np.where(f["contribution"] > 0, "augmente le risque", "diminue le risque")
         barres = alt.Chart(f.drop(columns="valeur")).mark_bar().encode(
             x=alt.X("contribution:Q", title="Contribution au risque (logit)"),
-            y=alt.Y("étiquette:N", sort=alt.EncodingSortField("contribution", op="sum", order="descending"), title=None,
+            y=alt.Y("etiquette:N", sort=alt.EncodingSortField("contribution", op="sum", order="descending"), title=None,
                     axis=alt.Axis(labelLimit=420)),
             color=alt.Color("effet:N", scale=alt.Scale(domain=["augmente le risque", "diminue le risque"], range=[ROUGE, VERT]),
                             legend=alt.Legend(orient="bottom", title=None)),
