@@ -1,0 +1,48 @@
+# Réveille les applications Streamlit toutes les 6 heures
+# pour éviter la mise en veille (12 h sans visite sur Streamlit Community Cloud).
+name: Garder les applications éveillées
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # toutes les 6 heures (heure UTC)
+  workflow_dispatch:          # bouton « Run workflow » pour un lancement manuel
+
+permissions:
+  contents: write             # nécessaire pour le commit d'entretien ci-dessous
+
+jobs:
+  reveil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer Playwright et Chromium
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Visiter les applications
+        run: python scripts/keep_alive.py
+
+      # GitHub suspend les tâches planifiées d'un dépôt sans activité depuis 60 jours.
+      # Si le dernier commit date de plus de 45 jours, on fait un petit commit d'entretien.
+      - name: Commit d'entretien (si nécessaire)
+        if: always()
+        run: |
+          dernier=$(git log -1 --format=%ct)
+          age=$(( ( $(date +%s) - dernier ) / 86400 ))
+          echo "Dernier commit il y a $age jours"
+          if [ "$age" -ge 45 ]; then
+            mkdir -p .github
+            date -u +"%Y-%m-%dT%H:%M:%SZ" > .github/derniere-activite.txt
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .github/derniere-activite.txt
+            git commit -m "Entretien : maintien de la tâche planifiée"
+            git push
+          fi
