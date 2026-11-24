@@ -91,7 +91,13 @@ with st.sidebar:
     st.divider()
     st.caption(f"Modèle : LightGBM ({R['nb_variables']} variables)\n\n"
                f"Test : AUC {R['auc']:.3f} · Gini {R['gini']:.2f}".replace(".", ","))
-    st.caption("[Code sur GitHub](https://github.com/francktaylor/scoring-risque-de-credit)")
+    st.divider()
+    st.link_button("💻 Voir le code sur GitHub",
+                   "https://github.com/francktaylor/scoring-risque-de-credit",
+                   width="stretch")
+    st.caption("Réalisé par **Franck Taylor MBESSO MAGOUA**, élève ingénieur à l'ENSAI  \n"
+               "[LinkedIn](https://www.linkedin.com/in/franck-taylor-mbesso) · "
+               "[GitHub](https://github.com/francktaylor)")
 
 if "seuil" not in st.session_state:
     st.session_state.update(seuil=R["seuil"], marge=R["marge"], perte=R["perte"])
